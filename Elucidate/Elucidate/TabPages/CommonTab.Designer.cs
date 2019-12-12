@@ -1,6 +1,6 @@
 ﻿namespace Elucidate.TabPages
 {
-    partial class CommonTab
+    internal partial class CommonTab
     {
         /// <summary> 
         /// Required designer variable.

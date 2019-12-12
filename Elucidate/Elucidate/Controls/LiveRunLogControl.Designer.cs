@@ -33,6 +33,7 @@ namespace Elucidate.Controls
             this.components = new System.ComponentModel.Container();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.toolStripStatusLabel1 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
+            this.toolStripProgressBar1 = new Elucidate.Shared.TextOverProgressBar();
             this.runWithoutCaptureMenuItem = new ComponentFactory.Krypton.Toolkit.KryptonCheckBox();
             this.checkBoxDisplayOutput = new ComponentFactory.Krypton.Toolkit.KryptonCheckBox();
             this.comboBoxProcessStatus = new ComponentFactory.Krypton.Toolkit.KryptonComboBox();
@@ -42,7 +43,6 @@ namespace Elucidate.Controls
             this.checkBoxCommandLineOptions = new ComponentFactory.Krypton.Toolkit.KryptonCheckBox();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.kryptonPanel1 = new ComponentFactory.Krypton.Toolkit.KryptonPanel();
-            this.toolStripProgressBar1 = new Elucidate.Shared.TextOverProgressBar();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.comboBoxProcessStatus)).BeginInit();
             this.tableLayoutPanelAdditionalCommands.SuspendLayout();
@@ -91,6 +91,22 @@ namespace Elucidate.Controls
             this.toolStripStatusLabel1.TabStop = false;
             this.toolStripStatusLabel1.Values.Text = "2000-01-01 00:00:00Z";
             // 
+            // toolStripProgressBar1
+            // 
+            this.toolStripProgressBar1.ContainerControl = this;
+            this.toolStripProgressBar1.DisplayText = "";
+            this.toolStripProgressBar1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.toolStripProgressBar1.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.toolStripProgressBar1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(205)))), ((int)(((byte)(50)))));
+            this.toolStripProgressBar1.Location = new System.Drawing.Point(602, 0);
+            this.toolStripProgressBar1.Margin = new System.Windows.Forms.Padding(0);
+            this.toolStripProgressBar1.Name = "toolStripProgressBar1";
+            this.toolStripProgressBar1.ShowInTaskbar = true;
+            this.toolStripProgressBar1.Size = new System.Drawing.Size(256, 30);
+            this.toolStripProgressBar1.Step = 3;
+            this.toolStripProgressBar1.TabIndex = 4;
+            this.toolStripProgressBar1.TextColor = System.Drawing.SystemColors.ControlText;
+            // 
             // runWithoutCaptureMenuItem
             // 
             this.runWithoutCaptureMenuItem.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -129,6 +145,7 @@ namespace Elucidate.Controls
             this.comboBoxProcessStatus.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxProcessStatus.DropDownWidth = 120;
             this.comboBoxProcessStatus.FormattingEnabled = true;
+            this.comboBoxProcessStatus.IntegralHeight = false;
             this.comboBoxProcessStatus.Items.AddRange(new object[] {
             "Stopped",
             "Running",
@@ -138,6 +155,7 @@ namespace Elucidate.Controls
             this.comboBoxProcessStatus.Name = "comboBoxProcessStatus";
             this.comboBoxProcessStatus.Size = new System.Drawing.Size(120, 24);
             this.comboBoxProcessStatus.StateCommon.ComboBox.Content.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBoxProcessStatus.StateCommon.ComboBox.Content.TextH = ComponentFactory.Krypton.Toolkit.PaletteRelativeAlign.Near;
             this.comboBoxProcessStatus.StateCommon.Item.Content.ShortText.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxProcessStatus.TabIndex = 1;
             this.comboBoxProcessStatus.Text = "Stopped";
@@ -167,6 +185,7 @@ namespace Elucidate.Controls
             this.txtAddCommands.Name = "txtAddCommands";
             this.txtAddCommands.Size = new System.Drawing.Size(502, 19);
             this.txtAddCommands.StateCommon.Content.Font = new System.Drawing.Font("Lucida Console", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtAddCommands.StateCommon.Content.TextH = ComponentFactory.Krypton.Toolkit.PaletteRelativeAlign.Inherit;
             this.txtAddCommands.TabIndex = 1;
             this.txtAddCommands.ToolTipValues.Description = "Start with a single + to remove the default";
             this.txtAddCommands.ToolTipValues.EnableToolTips = true;
@@ -229,22 +248,6 @@ namespace Elucidate.Controls
             this.kryptonPanel1.Name = "kryptonPanel1";
             this.kryptonPanel1.Size = new System.Drawing.Size(858, 316);
             this.kryptonPanel1.TabIndex = 4;
-            // 
-            // toolStripProgressBar1
-            // 
-            this.toolStripProgressBar1.ContainerControl = this;
-            this.toolStripProgressBar1.DisplayText = "";
-            this.toolStripProgressBar1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.toolStripProgressBar1.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.toolStripProgressBar1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(205)))), ((int)(((byte)(50)))));
-            this.toolStripProgressBar1.Location = new System.Drawing.Point(602, 0);
-            this.toolStripProgressBar1.Margin = new System.Windows.Forms.Padding(0);
-            this.toolStripProgressBar1.Name = "toolStripProgressBar1";
-            this.toolStripProgressBar1.ShowInTaskbar = true;
-            this.toolStripProgressBar1.Size = new System.Drawing.Size(256, 30);
-            this.toolStripProgressBar1.Step = 3;
-            this.toolStripProgressBar1.TabIndex = 4;
-            this.toolStripProgressBar1.TextColor = System.Drawing.SystemColors.ControlText;
             // 
             // LiveRunLogControl
             // 
